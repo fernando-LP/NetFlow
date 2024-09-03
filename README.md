@@ -109,3 +109,25 @@ Fazendo uma analogia para monitoramento de tráfego de veículos: "Enquanto o Ne
 | sFlow            | Baseado em amostragem - 1 em N "pacotes" capturados para análise de tráfego. [sFlow Products](http://www.sflow.org/products) |
 | J-Flow           | Protocolo da Juniper para exportação de fluxos de roteadores, switches e firewalls. |
 | NetStream        | Uma variação do NetFlow compatível com dispositivos Huawei. |
+
+
+
+# Softwares para monitormaneto de NetFlow
+* NETSCOUT
+* ElastiFlow
+* nfsen-ng
+* NFStream
+* GoFlow 2
+* FastNetmon
+* WanGuard
+* NEXUSGUARD
+* Grafana Labs
+* Akamai DDoS Protections
+* Cloudflare Docs
+* vFlow
+* Corero - the DDoS Protections specialist
+* CERT NetSA Security Suite
+* Elasticsearch
+
+
+
