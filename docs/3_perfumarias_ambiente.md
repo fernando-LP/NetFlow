@@ -6,4 +6,4 @@
 2. Stack Monitoring
 3. Selecione a opcao: "Or, set up with self monitoring"
 
-![Imagem ilustrativa](../Imagens-NetFlow/Draw.png)
+![Imagem ilustrativa](../Imagens-NetFlow/netflow_monitoring_stack.png)
