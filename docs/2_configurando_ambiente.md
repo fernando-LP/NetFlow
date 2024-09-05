@@ -1,33 +1,40 @@
-# Ambimente para monitoramento NETFLOW
-O ambiente sera da seguinte forma, no roteador, switch ou equiapmento de preferencia na borda, colocamos ele para enviar os fluxos de rede para o servidor onde o elastich foi instalado.
-Nesse servidor precisa conter alguns servicos rodando que sao:
+# Ambiente para Monitoramento NetFlow
+
+Neste ambiente, configuraremos o monitoramento de NetFlow. No roteador, switch ou equipamento de preferência na borda, configuraremos para enviar os fluxos de rede para um servidor onde o Elasticsearch foi instalado. Este servidor deve ter os seguintes serviços em execução:
+
 * FileBeat
-* ElasticSearch
+* Elasticsearch
 * Kibana
 
 ![Imagem ilustrativa](../Imagens-NetFlow/Draw.png)
 
-## 1 - Baixar ISO do debian
-> Utilizamos a versao do debian 12 nesse tutorial.
-ISO DEBIAN: https://www.debian.org/CD/http-ftp/
+## 1 - Baixar ISO do Debian
 
-## Requisitos do sistema
-Para uma base teste podemos utilizar o seguinte:
-* 2 CPU
-* 4G Ram
-* 40G disco
+Utilizamos a versão do Debian 12 neste tutorial.
 
-## Instalacao do debian
-1. Instalacao sem interface grafica
-2. Habilitar o acesso SSH
+[ISO DEBIAN](https://www.debian.org/CD/http-ftp/)
 
+## Requisitos do Sistema
 
-# Instalacao dos servicos
-> Nesse momento com a maquina (vm) ja criada, vamos iniciar a instalacao dos servicos.
-> Repare que todos os servicos estao na mesma versao, e interessante manter eles sempre na mesma versao para questoes de compatibildiade
+Para uma base de teste, recomendamos os seguintes requisitos:
 
-## instale as bibliotecas Globais
-Aqui estamos instalando algumas dependencias que iremos utilizar. Cuide bastante do clock do servidor, para ficar sincronizado com o horario dos seus equipamentos da rede.
+* 2 CPUs
+* 4 GB RAM
+* 40 GB de disco
+
+## Instalação do Debian
+
+1. Instale o Debian sem interface gráfica.
+2. Habilite o acesso SSH.
+
+## Instalação dos Serviços
+
+Com a máquina (VM) já criada, vamos iniciar a instalação dos serviços. É importante manter todos os serviços na mesma versão para garantir compatibilidade.
+
+### Instale as Bibliotecas Globais
+
+Instale algumas dependências essenciais. Verifique se o relógio do servidor está sincronizado com o horário dos seus equipamentos de rede.
+
 ```bash
 apt update
 apt upgrade
