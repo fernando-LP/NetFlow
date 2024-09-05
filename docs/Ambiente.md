@@ -15,4 +15,4 @@ Para uma base teste podemos utilizar o seguinte:
 1. Instalacao sem interface grafica
 2. Habilitar o acesso SSH
 
-https://github.com/fernando-LP/NetFlow/blob/main/Imagens-NetFlow/Draw.png
+![Imagem ilustrativa](Imagens-NetFlow/Draw.png)
