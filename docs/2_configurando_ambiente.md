@@ -169,4 +169,61 @@ hosts: ["IP SERVIDOR:9200"]
 host: "IP SERVIDOR:5601"
 ```
 
-###
+### Listar modulos do beats e habilitar
+
+```bash
+filebeat modules list
+filebeat modules enable netflow
+```
+
+### acessar arquivo de configuração netflow alterar endereço ip de escuta.
+* Diretorio: `/etc/filebeat/modules.d/netflow.yml`
+
+```bash
+- module: netflow
+  log:
+    enabled: true
+    var:
+      netflow_host: IP SERVIDOR
+      netflow_port: 2055
+```
+
+### restart serviços
+```bash
+systemctl enable filebeat
+service filebeat start
+filebeat setup
+systemctl restart elasticsearch.service
+```
+![Imagem ilustrativa](../Imagens-NetFlow/filebeat_setup_enable_grafico.png)
+> filebeat setup, ja configura dashboards automaticamente para fluxos de netflow.
+
+
+# Download Mikrotik
+> Para testar se a coleta de flow esta funcionando, vamos utilizar um concentrador mikrotik.
+
+Pagina para download: https://mikrotik.com/download
+* Selecionar a opacao: Cloud Hosted Router
+* Images: OVA image - Long-Term
+* Descompacte o arquivo baixado do mikrotik e suba no virtual-box
+* Usuario e senha de acesso:
+    * Login: admin
+    * Password: "nao tem senha, so da entender"
+
+```bash
+/ip traffic-flow
+set cache-entries=1k enabled=yes interfaces=local
+/ip traffic-flow target
+add dst-address=IP SERVIDOR ELASTICH
+```
+> Nesse momento gere algum trafego no mikrotik, e ele sera enviado para o servidor de flow.
+
+
+# DASHBOARD KIBANA
+No kibana, nas dashboards, selecione alguns tipos de dashboard para netflow e o sistema montara os graficos.
+
+![Imagem ilustrativa](../Imagens-NetFlow/dash_kibana.png)
+
+Selecionando uma dashboard, termos algo parecido com isso:
+
+![Imagem ilustrativa](../Imagens-NetFlow/dash_inicial.png)
