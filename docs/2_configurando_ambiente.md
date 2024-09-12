@@ -44,10 +44,10 @@ apt -y install wget ntp apt-transport-https gnupg unzip curl net-tools default-j
 Voce pode querer baixar a versao mais atual do ElastichSearch, para isso pode acessar a seguinte pagina: https://www.elastic.co/pt/downloads/elasticsearch e selecionar a opcao apt-get em Packege managers
 
 ```bash
-wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-8.15.0-amd64.deb
-wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-8.15.0-amd64.deb.sha512
-shasum -a 512 -c elasticsearch-8.15.0-amd64.deb.sha512 
-dpkg -i elasticsearch-8.15.0-amd64.deb
+wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-8.15.1-amd64.deb
+wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-8.15.1-amd64.deb.sha512
+shasum -a 512 -c elasticsearch-8.15.1-amd64.deb.sha512 
+sudo dpkg -i elasticsearch-8.15.1-amd64.deb
 ```
 Quando descompactar o o elatichsearch, o mesmo vai informar uma senha para voce, guarde ela, pois iremos utilizar depois.
 
@@ -120,9 +120,8 @@ Agora com a configuracao feita no ElastichSearch, podemos testar o acesso da pag
 Pagina oficial do KIBANA onde e possivel baixar a versao mais atual: https://www.elastic.co/pt/downloads/kibana
 
 ```bash
-wget https://artifacts.elastic.co/downloads/kibana/kibana-8.15.0-amd64.deb
-shasum -a 512 kibana-8.15.0-amd64.deb 
-dpkg -i kibana-8.15.0-amd64.deb
+wget https://artifacts.elastic.co/downloads/kibana/kibana-8.15.1-amd64.deb
+shasum -a 512 kibana-8.15.1-amd64.deb 
 ```
 
 ## Acessar arquivo de configuração do Kibana
@@ -158,10 +157,10 @@ Aplicacao responsavel por receber o fluxo dos equipamentos.
 Pagina oficial para download: https://www.elastic.co/pt/downloads/beats/filebeat
 
 ```bash
-wget https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-8.15.0-amd64.deb
-wget https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-8.15.0-amd64.deb.sha512
-shasum -a 512 -c filebeat-8.15.0-amd64.deb.sha512
-dpkg -i filebeat-8.15.0-amd64.deb
+wget https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-8.15.1-amd64.deb
+wget https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-8.15.1-amd64.deb.sha512
+shasum -a 512 -c filebeat-8.15.1-amd64.deb.sha512
+dpkg -i filebeat-8.15.1-amd64.deb
 ```
 
 ## Configuracao FILEBEAT
