@@ -25,3 +25,6 @@ Para isso acontecer o ataque é feito da seguinte forma:
  * "Depois que você já tomou o tiro, não adianta colocar o colete!"
  * Segundo os especialistas e consultorias de ataques ddos, a implantação para mitigar ataques ddos, dura dias e não horas. Durante esse tempo o ataque vai está ocorrendo, geranto varios efeitos colaterais.
 
+## Mitigação
+
+Nos ataques DDoS, em vez de falar em bloqueio, usamos o termo mitigação. Embora possa parecer simples bloquear o tráfego indesejado, na prática existem muitas formas diferentes de conduzir um ataque, utilizando variados tipos de protocolos. O atacante pode tornar o tráfego indesejado o mais parecido possível com o tráfego legítimo, tornando-o quase invisível. Por essa razão, o bloqueio de ataques DDoS apenas com regras de firewall, como ACLs (listas de controle de acesso), é muitas vezes ineficaz. Portanto, usamos o termo mitigação, que significa suavizar, ou seja, tentar reduzir o impacto do ataque DDoS para que ele não afete negativamente a rede.
